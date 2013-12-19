@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />     
+    <meta name="description" content="{{meta_description}}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Stylesheet and fonts For Prestine-->
+        <link rel="stylesheet" type="text/css" href="/styles/css/style.css" />
+         <link rel="stylesheet" type="text/css" href="/styles/font-awesome/css/font-awesome.min.css" />  
+
+    <!--Google Web Fonts-->
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:700' rel='stylesheet' type='text/css'>
+
+    <!--Favicon Image-->
+        <link rel="icon" href="/assets/images/favicon.ico">
+    <!--[if IE]>
+        <link rel="shortcut icon" href="/assets/images/favicon.ico">
+        <![endif]-->
+   <!--Favicon Image End-->
+ 
+        {{ghost_head}}
+        <title>{{meta_title}}</title>
+        {{! Ghost outputs important style and meta data with this tag }}
+         {{>analytics}}
+</head>
+<!--Main content Begin -->
+<body class="{{body_class}}">
+        {{{body}}}
+
+
+        <!--Footer-->
+            <footer class="site-footer">
+                <p><a href="{{@blog.url}}/rss/"><i class="icon-rss"></i> Subscribe! </a></p> 
+                <div class="inner">
+                    <p> All content copyright <a href="/">{{@blog.title}}</a> &copy; 2013 &bull; All rights reserved.</p>
+                     <p>Proudly published with <a class="icon-align-justify" href="http://ghost.org"> Ghost</a></p>
+                </div>
+            </footer>
+    {{ghost_foot}}
+
+    <!--Main content End -->
+</body>
+</html>

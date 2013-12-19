@@ -1,0 +1,72 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+ 
+<!-- Single Post Header, little different from the homepage-->
+ <header class="blog-head">        
+        <div class="blog-bg"{{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
+        <div class="blog-head-inner">
+           {{#if @blog.logo}}<a id="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
+            <h1><a class="blog-title" href="{{@blog.url}}">{{@blog.title}}</a></h1>
+
+            <p>{{@blog.description}}</p>
+        </div>
+        </div>
+    </div>
+</header>
+    <!-- Single Post Area-->
+     <main class="content" role="main">
+
+        <div class="single inner">   
+            <article class="single-post">
+                {{#post}}               
+                    <h1 class="single-post-title">{{{title}}}</h1>
+                    <section class="meta center">
+                                <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
+                                {{#if tags}} |  in  {{tags}}{{/if}}
+                    </section>                    
+                    <section class="single-post-content">
+                        {{content}}
+                    </section>
+                        <section class="share left">
+                            <h6>Share this post :</h6>
+                           <a class="icon-twitter" href="http://twitter.com/share?text={{title}}&url={{url absolute="true"}}"
+                                onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                                <span class="hidden">Twitter</span>
+                            </a>
+                            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+                                onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                                <span class="hidden">Facebook</span>
+                            </a>
+                            <a class="icon-google-plus" href="https://plus.google.com/share?url={{url absolute="true"}}"
+                               onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                                <span class="hidden">Google+</span>
+                            </a> 
+                        </section>
+                      </article>
+    
+    <!--Disqus Commenting System At the Bottom Of Every Single Post --> 
+
+            <section>
+                    {{>comments}}
+                </section>
+                  <!--Disqus Commenting System End -- > 
+
+                <!--Single Post Author Bio -->
+                    <div class="post-author clearfix">
+                            {{#if author}}
+                        
+                                    <img src="{{user.image}}" alt="author" /> 
+                                  <div class="author-meta">  
+                                    <h4>{{author.name}}</h4>
+                                    <p><a href="{{user.website}}">{{user.website}}</a></p>
+                                    <p>{{author.bio}}</p>
+                                    </div>
+                            {{/if}}
+                        </div>
+    
+             {{/post}}   
+
+    </main>
+  </div>  

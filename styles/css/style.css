@@ -1,0 +1,490 @@
+/* ==========================================================================
+     Normalize and Basic Reset
+   ========================================================================== */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline; 
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+@import url(normalize.css);
+
+/* ==========================================================================
+  Setting up base styles
+   ========================================================================== */
+
+p, blockquote, pre, b, u, cite, code, article, nav, ul, li, label {
+    font-family:'Source Sans Pro',Segoe UI, Helvetica, Arial, sans-serif;
+    line-height: 2rem;
+    color: #5b5b5b;
+    text-transform: none;
+    letter-spacing: 1px;
+ }
+
+h1, h2, h3, h4, h5, h6, strong, small,big {
+     
+     font-family: 'Roboto Slab', serif;
+     padding: 0.7rem 0rem;
+     text-rendering: optimizeLegibility;
+     font-weight: 700;
+     line-height: 60px;
+     color:#4c4c4c;
+}
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    max-height: 100%;
+    color: #3A4145;
+    background:url(../images/bg.gif);
+}
+
+::-moz-selection {
+    color: #222;
+    background: #D6EDFF;
+    text-shadow: none;
+}
+
+::selection {
+    color: #222;
+    background: #D6EDFF;
+    text-shadow: none;
+}
+h1 {
+    font-size: 3.4rem;
+    line-height: 60px;
+}
+h1 a {
+    line-height: 60px;
+}
+h2 {
+    font-size: 3rem;
+}
+h2 a {
+    line-height: 60px;
+}
+h3 {
+    font-size: 2.4rem;
+}
+h4 {
+    font-size: 2rem;
+}
+h5 {
+    font-size: 1.6rem;
+}
+h6 {
+    font-size: 1.2rem;
+}
+p {
+    font-size: 1.2rem;
+    padding: 0.7rem 0rem;
+}
+
+ul,ol {
+    padding-left: 20px;
+}
+a {
+   font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    color:#3fd47e;
+    transition: color ease 0.3s;
+    text-decoration: none;
+   
+}
+a:hover {
+    color: #2980B9;
+    text-decoration:none;
+}
+.center {
+    text-align: center;
+}
+.left {
+    text-align: left;
+}
+.right {
+    text-align: right;
+}
+.hidden {
+    display: none;
+}
+input {
+    border: 1px solid #ddd;
+    width: 220px;
+    height: 37px;
+    margin: 0px 0;
+    padding: 0 0 0 34px;
+    position: relative;
+    -webkit-transition: width 400ms ease, background 400ms ease;
+    transition:         width 400ms ease, background 400ms ease;
+}
+
+code {
+    padding: 1px 3px;
+    font-size: 1em;
+    white-space: pre;
+    border: 1px solid #E3EDF3;
+    background: #F7FAFB;
+    border-radius: 2px;
+}
+
+pre {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 1.6em 0;
+    border: 1px solid #E3EDF3;
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    white-space: pre;
+    overflow: auto;
+    background: #f3f3f3;
+    border-radius: 3px;
+}
+
+blockquote {
+    display: block;
+    font-style: italic;
+    margin: 0px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 20px 10px;
+}
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+/* ==========================================================================
+   General
+   ========================================================================== */
+.content {
+    width: 100%;
+}
+.outer {
+    width: 100%;
+}
+/*-------Change background Here--------*/
+.outer:nth-child(even) {
+    width: 100%;
+    background-color: #595959; 
+    color:#fff;
+ }
+.outer:nth-child(even) p {
+    color: #f7f7f7;
+}
+
+ .blog-head {
+    width: 100%;
+    max-height: 450px;
+    color: #fff;
+    text-align: center;
+    background: #111111;
+   
+}
+.blog-head-inner {
+   max-height: 300px;
+   clear: both;
+   max-width: 400px;
+    margin: 0px auto;
+}
+.blog-head-inner img:hover {
+    opacity: 0.8;
+}
+.blog-bg {
+    max-height: 450px;
+    border-bottom:5px solid #f33; 
+    padding: 0px;
+    margin: 0px;
+    background: #111111 no-repeat center center;
+    background-size: cover;
+}
+.blog-title {
+    line-height: 1px;
+    padding: 4px 0px;
+    letter-spacing: 1px;
+    color: #16a085;
+}
+.blog-head-inner p {
+    padding: 0px;
+}
+
+#blog-logo img {
+    max-width: 150px;
+    max-height: 150px;
+}
+.inner {
+    max-width: 750px;
+    margin: 0 auto;
+}
+/* ==========================================================================
+   Homepage Index Posts
+   ========================================================================== */
+
+.index-post {
+     padding:50px 10px 50px 10px;
+}
+.post-title {
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+}
+.meta {
+    padding: 20px 10px; 
+}
+.share a {
+    padding:10px ;
+}
+.read-more {
+    padding: 10px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.read-more:hover {
+    border: 1px solid #adadad;
+    transition: color ease 0.3s;
+}
+
+/* ==========================================================================
+  Single Post
+   ========================================================================== */
+.single {
+     margin: 50px auto;
+     padding: 10px;
+}
+.single-post-title {
+    border-bottom: 1px solid #ddd;
+    padding: 35px 0px;
+    text-align: center;
+}
+.single-post {
+    border-bottom:5px solid #f33; 
+}
+.single-post img {
+    width: 100%;
+    height:auto;
+}
+
+.single-post .share {
+     font-size: 2rem;
+     padding: 10px;
+}
+.disqus {
+    padding: 50px 0px;
+}
+
+.post-author {
+    max-width:750px;
+    height: 100%;
+    margin:20px auto;
+    padding: 20px;
+    background-color: #220E10;
+    display: block;
+    border-radius:5px; 
+}
+.post-author h4 {
+    padding: 0px;
+    color: #fff;
+    text-transform: capitalize;
+    margin: 0px;
+    line-height: 30px;
+}
+.post-author p {
+    padding: 0px;
+    margin: 0;
+}
+.post-author a {
+    line-height: 10px;
+}
+.post-author img {
+    max-width: 100px;
+    max-height: 100px;
+    margin: 5px;
+    float: left;
+}
+
+/* ==========================================================================
+  Pagination Links
+   ========================================================================== */
+
+.pagination {
+    width: 100%;
+    padding: 25px 0px;
+    font-size: 1.3rem;
+    text-align: center;
+    clear: both;
+}
+.pagination a {
+    padding: 10px 10px;
+    border-radius: 5px;
+}
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.site-footer {
+    position: relative;
+    margin: 0px auto;
+    padding: 5rem 0;
+    font-size: 1.3rem;
+    background-color: #220E10;
+    text-align: center;
+    border-top:5px solid #f33; 
+}
+.site-footer p {
+    padding: 0px;
+}
+
+/* ==========================================================================
+   Media Queries For Responsive behaviour max-width 900px
+   ========================================================================== */
+
+@media only screen and (max-width: 900px) {
+    .blog-head {
+    max-height: 300px;  
+    }
+    .blog-head-inner {
+   padding:0%;
+    }
+
+    .blog-title {
+        font-size: 3rem;
+    }
+    .inner {
+        font-size: 0.9em;
+        line-height: 1.6em;
+        padding: 10px;
+    }
+    .index-post {
+    padding: 10px 0px 10px 0px;
+    }
+    .meta {
+    padding: 10px 5px; 
+    }
+    p {
+    font-size: 1rem;
+    padding: 0.4rem 0rem;
+    line-height: 30px;
+    }
+    h1 {
+        font-size:3rem; 
+    }
+    h2 {
+        font-size: 2.8rem;
+    }
+    h3 {
+        font-size: 2.4rem;
+    }
+    h4 {
+        font-size: 2rem;
+    }
+    h5 {
+       font-size:  1.6rem;
+    }
+    h6 {
+        font-size:1.2rem;
+    }
+    h1,h2,h3,h4,h5,h6{
+    padding: 0.4rem 0rem;
+    text-rendering: optimizeLegibility;
+    line-height:50px;
+}
+    .pagination {
+        font-size: 1rem;
+        padding: 10px 0px;
+    }
+    .disqus {
+        padding: 25px 0px;
+    }
+}
+/* ==========================================================================
+   Media Queries For Responsive behaviour max-width 480px
+   ========================================================================== */
+
+@media only screen and (max-width: 480px) {
+    .blog-head {
+         max-height: 250px;  
+        }
+    .blog-head-inner {
+            padding:0%;
+    }
+
+    .blog-title {
+        font-size: 2rem;
+    }
+    .inner {
+        font-size: 0.9em;
+        line-height: 1.6em;
+        padding: 10px;
+    }
+    .index-post {
+    padding: 20px 0px 20px 0px;
+    }
+    .meta {
+    padding: 5px 2px; 
+    }
+    p {
+    font-size: 1rem;
+    padding: 0.3rem 0rem;
+    line-height: 30px;
+    }
+    h1 {
+        font-size:2.5rem; 
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+    h3 {
+        font-size: 1.6rem;
+    }
+    h4 {
+        font-size: 1.4rem;
+    }
+    h5 {
+       font-size:  1.2rem;
+    }
+    h6 {
+        font-size:1rem;
+    }
+    h1,h2,h3,h4,h5,h6{
+        padding: 0.3rem 0rem;
+        text-rendering: optimizeLegibility;
+        line-height:50px;
+}
+    .pagination {
+        font-size: 0.9rem;
+        padding: 7px 0px;
+    }
+    .share {
+        padding: 5px 0px;
+    }
+    .read-more {
+        padding:5px 0px;
+    }
+    .disqus {
+        padding: 10px 0px;
+    }
+       
+}

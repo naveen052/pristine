@@ -1,0 +1,59 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+{{! The big featured header on the homepage, with the site logo and description }}
+<!--Blog Header -->
+    <header class="blog-head">
+            <div class="blog-bg" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
+            <div class="blog-head-inner">
+               {{#if @blog.logo}}<a id="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
+                <h1><a class="blog-title" href="{{@blog.url}}">{{@blog.title}}</a></h1>
+                <p>{{@blog.description}}</p>
+            </div>
+            </div>
+        </div>
+    </header>
+
+<!--Main Index Posts Area -->
+    <main class="content" role="main">        
+       {{#foreach posts}}        
+        <div class="outer">
+            <div class="inner">
+                    <article class="index-post">                            
+                            <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+                            <section class="meta center">
+                               <p> <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
+                                 {{#if tags}} |  in  {{tags}}{{/if}} </p>
+                             </section>
+                           
+                            <section class="post-excerpt">
+                                <p>{{excerpt}}&hellip;</p>
+                            </section>
+                            <p class="center share">
+                                <a class="icon-twitter" href="http://twitter.com/share?text={{title}}&url={{url absolute="true"}}"
+                                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                                    <span class="hidden">Twitter</span>
+                                </a>
+                                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+                                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                                    <span class="hidden">Facebook</span>
+                                </a>
+                                <a class="icon-google-plus" href="https://plus.google.com/share?url={{url absolute="true"}}"
+                                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                                    <span class="hidden">Google+</span>
+                                </a></p>
+                            <p class="center"><a class="read-more" href="{{url}}">Read More →</a></p>
+                     </article>
+                </div>
+            </div> 
+    {{/foreach}}
+
+</main>
+    <!--Pagination Links -->
+         <div class="pagination">
+               {{pagination}}
+            </div>
+
+ 

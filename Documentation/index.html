@@ -1,0 +1,167 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Pristine | A Minimalistic Free Theme For Ghost</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+	
+		<h3 class="center alt">&ldquo;Pristine Theme v1.0 &rdquo; Documentation by &ldquo;Naveen Singh &ldquo;</h3>
+		
+		<hr>
+		
+		<h1 class="center">&ldquo;Pristine |  A Minimalistic Ghost Theme &rdquo;</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					By: Naveen Singh<br>
+					Email: <a href="mailto:contact@naveensingh.org">contact@naveensingh.org</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for having this theme. If you have any questions that are beyond the scope of this help file, please feel free to email <a href="mailto:contact@naveensingh.org">here</a>. Thanks so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#gettingstarted">Getting Started With Installation</a></li>
+			<li><a href="#disqus">Setting Up Disqus Comments</a></li>
+			<li><a href="#logo">Logo & Background Images</a></li>
+			<li><a href="#analytics">Configure Analytics</a></li>
+			<li><a href="#fonta">Using Font-Awesome v3.2.1 Icon set</a></li>
+			<li><a href="#author">Changing Author Bio</a></li>
+			<li><a href="#credits">Sources and Credits</a></li>
+		</ol>
+		
+		<hr>
+		<h3 id="gettingstarted">Getting Started With Installation</h3>
+
+			<li>Extract the contents of Pristine in a folder and move the folder to</li>
+			<li>Ghost > Contents > Themes > and place it here.</li>
+			<li> If you install it locally restart Ghost to see changes.</li>
+			<li>And if online refresh the Settings page  scroll down to the themes option and select Pristine from the dropdown.</li>
+
+			<hr>
+		
+		<h3 id="disqus"><strong>A) Disqus Comment System</strong> - <a href="#toc">top</a></h3>
+		<li>The comments system Would'nt work untill you set it up.</li>
+				<li>Head to <a href="https://disqus.com/admin/signup/?utm_source=New-Site">Disqus.com</a> and register your website, you will be assigned a short-name for your website.</li>
+				<li>Note down the shortname.</li>
+				<li>Goto <pre>content/themes/Pristine/partials</pre> </li>
+				<li>And open <b>"comments.hbs"</b> file in a text editor</li>
+				<li>Look for this line  </li>
+				 <pre> " var disqus_shortname = 'ENTER YOUR SITE'S SHORT NAME HERE';
+				  // required: replace example with your forum shortname " </pre>
+				 <li>And replace "ENTER YOUR SITE'S SHORT NAME HERE" with your site's short name. </li>				 
+			<img width="700px" src="assets/images/disqus.png" alt="HTML Structure" />
+				<li>Save the page and refresh.</li>
+				 <li>If any problem related to this ? please ask them in the comments</li>
+				 <li style="color:red">Do not edit anything here other than changing shortname or it will mess things up</li>
+ 
+
+		<hr>
+		
+		<h3 id="logo"><strong>B) Logo & Background Images & Favicon</strong> - <a href="#toc">top</a></h3>
+		<h3>Changing the Logo</h3>
+		<li>Head to the Settings option in Ghost admin Panel.</li>
+		<li>Scroll to the select logo option</li>
+		<li>Upload the image, save it.</li>
+<hr>
+		<h3>Changing the Background Image</h3>
+		<li>We've included one beautiful image as seen in the demo, in the assets/images folder, you could use it.</li>
+		<li>If you wish to change the bg then,</li>
+		<li>Head to the Settings option in Ghost admin Panel.</li>
+		<li>Scroll to the select background option</li>
+		<li>Upload the image, save it.</li>
+
+		<h3>Changing the Favicon :</h3>
+		<li>To add a favicon use an image of 32x32 px or 48x48 px</li>
+		<li>Use an online converter to convert your image to .ico format.</li>
+		<li>Once done place it in the assets/images folder.</li>
+		<li>And thats it refresh the page to see the change.</li>
+		
+		<hr>
+
+
+		<h3 id="analytics"><strong>C)Configure Analytics</h3></strong> -<a href="#toc">top</a></h3>
+
+		<ul>
+			<li>This is used to paste in your :
+				<ul>
+					<li>Google Anlaytics</li>
+					<li>Google Webmasters</li>
+					<li>Bing Webmasters</li>
+					<li>Alexa Analytics</li>
+					<li>Or any other code that need to be place before closing of the <head > tag.</li>
+				</ul>
+			</li>
+			<li>To add code open <pre>content/themes/Pristine/partials</pre> </li>
+		<li>Open <b>"analytics.hbs"</b> and paste your code in here</li>
+
+		<img width="700px" src="assets/images/ana.png" alt="analytics" />
+		<li>Save the file see the magic.</li>
+		</ul>
+
+		<hr>
+		<h3 id="fonta"><strong>D) Using Font-Awesome v3.2.1 Icon set</strong> - <a href="#toc">top</a></h3>
+		 <p>Font awesome provides free icons which are used and styled like fonts you can use them within your posts, you just have to include a small code.</p>
+		 <p>Head to this link <a href="http://fortawesome.github.io/Font-Awesome/icons/"> Font-Awesome</a> and see all the icons available and learn how to use them. </p>
+
+
+<hr>
+
+
+	<h3 id="author"><strong>E) Changing Author Bio</strong> - <a href="#toc">top</a></h3>
+			Author Bio is been showcased at the bottom of every post page add your details using following instructions.
+			<li>Upload a picture of your's From the Ghost admin panel /ghost/users</li>
+			<li>Write a little something about yourself in the bio section</li>
+			<li>Give a link to your Website</li>
+			<li>Thats it refresh the post page and see the changes</li>
+
+<hr>
+			<h3 id="credits"><strong>F) Sources and Credits</strong> - <a href="#toc">top</a></h3>
+				
+				<p>I've used the following Fonts And Icons.
+		
+		<ul>
+			<li><a href="http://fortawesome.github.io/Font-Awesome/icons/"> Font-Awesome</a> Icons</li>
+			<li>Google Fonts
+				<ul>
+					<li>Source Sans Pro</li>
+					<li>Roboto Sans</li>
+				</ul>
+				</li>
+			<li>Normalize.css <a href="http://git.io/normalize"> Check here</a></li>
+			
+			
+		</ul>
+		
+		<hr>
+		
+		<p>Once again, thank you so much for having this theme.I'd be glad to help you if you have any questions relating this theme. No guarantees, but I'll do my best to assist.</p> 
+		
+		<p class="append-bottom alt large"><strong><a href="http://naveensingh.org"> Naveen Singh</a></strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>
